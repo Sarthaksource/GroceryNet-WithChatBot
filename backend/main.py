@@ -4,8 +4,7 @@ from routers import customer, order, product, bot  # Import the new bot router
 
 app = FastAPI()
 
-# --- Middleware for CORS ---
-origins = ["http://localhost:5173"]
+origins = ["https://grocerynet.netlify.app"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -14,11 +13,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- Include all your application routers ---
 app.include_router(customer.router)
 app.include_router(order.router)
 app.include_router(product.router)
-app.include_router(bot.router) # Add the chatbot webhook router
+app.include_router(bot.router) 
 
 @app.get("/")
 def read_root():
