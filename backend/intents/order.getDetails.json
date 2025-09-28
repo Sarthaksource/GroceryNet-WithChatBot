@@ -1,0 +1,47 @@
+{
+  "id": "e5f6a7b8-c9d0-1234-5678-90abcdef1234",
+  "name": "order.getDetails",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "cust1",
+          "name": "customer-name",
+          "required": true,
+          "dataType": "@sys.person",
+          "value": "$customer-name",
+          "prompts": [
+            "Which customer's order do you want to see?"
+          ]
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    { "data": [ { "text": "Show me the order for ", "userDefined": false }, { "text": "Jane", "alias": "customer-name", "meta": "@sys.person", "userDefined": true }, { "text": ".", "userDefined": false } ] },
+    { "data": [ { "text": "what is in ", "userDefined": false }, { "text": "John's", "alias": "customer-name", "meta": "@sys.person", "userDefined": true }, { "text": " cart?", "userDefined": false } ] },
+    { "data": [ { "text": "get order details", "userDefined": false } ] },
+    { "data": [ { "text": "What's in my cart so far for ", "userDefined": false }, { "text": "Chris", "alias": "customer-name", "meta": "@sys.person", "userDefined": true }, { "text": "?", "userDefined": false } ] },
+    { "data": [ { "text": "Can you tell me what's in the order for ", "userDefined": false }, { "text": "Lisa", "alias": "customer-name", "meta": "@sys.person", "userDefined": true }, { "text": "?", "userDefined": false } ] },
+    { "data": [ { "text": "Read back the order for ", "userDefined": false }, { "text": "Mike", "alias": "customer-name", "meta": "@sys.person", "userDefined": true } ] },
+    { "data": [ { "text": "Summarize ", "userDefined": false }, { "text": "Anna's", "alias": "customer-name", "meta": "@sys.person", "userDefined": true }, { "text": " order.", "userDefined": false } ] },
+    { "data": [ { "text": "What have I ordered for ", "userDefined": false }, { "text": "Tom", "alias": "customer-name", "meta": "@sys.person", "userDefined": true }, { "text": "?", "userDefined": false } ] }
+  ]
+}

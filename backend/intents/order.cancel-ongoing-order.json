@@ -1,0 +1,70 @@
+{
+  "id": "a1b2c3d4-1111-2222-3333-a1b2c3d4e5f6",
+  "name": "order.cancel - context: ongoing-order",
+  "auto": true,
+  "contexts": [
+    "ongoing-order"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "cancel my order",
+          "userDefined": false
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "nevermind",
+          "userDefined": false
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "actually, cancel that",
+          "userDefined": false
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "stop the order",
+          "userDefined": false
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "clear the cart",
+          "userDefined": false
+        }
+      ]
+    }
+  ]
+}

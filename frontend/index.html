@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
+    <title>GroceryNet</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <script>
+    window.addEventListener('dfMessengerLoaded', function () {
+        const dfMessenger = document.querySelector("df-messenger");
+        const dfChat = dfMessenger.shadowRoot.querySelector("df-messenger-chat");
+
+        const sheet = new CSSStyleSheet();
+        sheet.replaceSync(`div.chat-wrapper.chat-open { height: 500px; }`);
+        dfChat.shadowRoot.adoptedStyleSheets = [
+            ...dfChat.shadowRoot.adoptedStyleSheets,
+            sheet
+        ];
+
+        document.addEventListener("click", function (e) {
+            const wrapper = dfChat.shadowRoot.querySelector(".chat-wrapper");
+
+            // if chat is open AND click is outside the wrapper
+            if (
+                wrapper.classList.contains("chat-open") &&
+                !wrapper.contains(e.target) &&
+                !dfMessenger.contains(e.target)
+            ) {
+                // Find the titlebar close button inside shadow DOM
+                const titlebar = dfChat.shadowRoot.querySelector("df-messenger-titlebar");
+                const closeButton = titlebar.shadowRoot.querySelector("button");
+
+                if (closeButton) {
+                    closeButton.click();
+                }
+            }
+        });
+    });
+    </script>
+    <df-messenger
+      chat-icon="chat.png"
+      intent="WELCOME"
+      chat-title="GrocBot"
+      agent-id="64238b00-90ac-481c-b355-0b265463fb86"
+      language-code="en"
+    ></df-messenger>
+  </body>
+</html>

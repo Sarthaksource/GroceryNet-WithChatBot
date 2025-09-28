@@ -1,0 +1,52 @@
+{
+  "id": "b2c3d4e5-f6a7-8901-2345-67890abcdef1",
+  "name": "order.start",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "ongoing-order",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "cust1",
+          "name": "customer-name",
+          "required": true,
+          "dataType": "@sys.person",
+          "value": "$customer-name",
+          "prompts": [
+            "What is the customer's name for this order?"
+          ]
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    { "data": [ { "text": "New order for ", "userDefined": false }, { "text": "John Doe", "alias": "customer-name", "meta": "@sys.person", "userDefined": true } ] },
+    { "data": [ { "text": "I want to place an order.", "userDefined": false } ] },
+    { "data": [ { "text": "Start an order for ", "userDefined": false }, { "text": "Jane", "alias": "customer-name", "meta": "@sys.person", "userDefined": true } ] },
+    { "data": [ { "text": "Let's start an order!", "userDefined": false } ] },
+    { "data": [ { "text": "I need to order something for ", "userDefined": false }, { "text": "Maria", "alias": "customer-name", "meta": "@sys.person", "userDefined": true }, { "text": ".", "userDefined": false } ] },
+    { "data": [ { "text": "Can I place an order?", "userDefined": false } ] },
+    { "data": [ { "text": "This order is for ", "userDefined": false }, { "text": "David", "alias": "customer-name", "meta": "@sys.person", "userDefined": true }, { "text": ".", "userDefined": false } ] },
+    { "data": [ { "text": "Create a new order under the name ", "userDefined": false }, { "text": "Sarah", "alias": "customer-name", "meta": "@sys.person", "userDefined": true } ] }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "id": "c3d4e5f6-a7b8-9012-3456-7890abcdef12",
+  "name": "order.add",
+  "auto": true,
+  "contexts": [
+    "ongoing-order"
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "ongoing-order",
+          "lifespan": 5
+        }
+      ],
+      "parameters": [
+        {
+          "id": "num1",
+          "name": "number",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$number",
+          "isList": true
+        },
+        {
+          "id": "prod1",
+          "name": "product-name",
+          "required": true,
+          "dataType": "@product-name",
+          "value": "$product-name",
+          "isList": true
+        },
+        {
+          "id": "uom1",
+          "name": "unit-of-measure",
+          "required": false,
+          "dataType": "@unit-of-measure",
+          "value": "$unit-of-measure",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "add ",
+          "userDefined": false
+        },
+        {
+          "text": "2",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "laptops",
+          "alias": "product-name",
+          "meta": "@product-name",
+          "userDefined": true
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "I need ",
+          "userDefined": false
+        },
+        {
+          "text": "one",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "mobile phone",
+          "alias": "product-name",
+          "meta": "@product-name",
+          "userDefined": true
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "add ",
+          "userDefined": false
+        },
+        {
+          "text": "one",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "kg",
+          "alias": "unit-of-measure",
+          "meta": "@unit-of-measure",
+          "userDefined": true
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "dal",
+          "alias": "product-name",
+          "meta": "@product-name",
+          "userDefined": true
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "I need ",
+          "userDefined": false
+        },
+        {
+          "text": "5",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "kilograms",
+          "alias": "unit-of-measure",
+          "meta": "@unit-of-measure",
+          "userDefined": true
+        },
+        {
+          "text": " of ",
+          "userDefined": false
+        },
+        {
+          "text": "rice",
+          "alias": "product-name",
+          "meta": "@product-name",
+          "userDefined": true
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "Also add ",
+          "userDefined": false
+        },
+        {
+          "text": "6",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "pieces",
+          "alias": "unit-of-measure",
+          "meta": "@unit-of-measure",
+          "userDefined": true
+        },
+        {
+          "text": " of ",
+          "userDefined": false
+        },
+        {
+          "text": "eggs",
+          "alias": "product-name",
+          "meta": "@product-name",
+          "userDefined": true
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "get me ",
+          "userDefined": false
+        },
+        {
+          "text": "12",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " ",
+          "userDefined": false
+        },
+        {
+          "text": "units",
+          "alias": "unit-of-measure",
+          "meta": "@unit-of-measure",
+          "userDefined": true
+        },
+        {
+          "text": " of ",
+          "userDefined": false
+        },
+        {
+          "text": "soda",
+          "alias": "product-name",
+          "meta": "@product-name",
+          "userDefined": true
+        }
+      ]
+    }
+  ]
+}

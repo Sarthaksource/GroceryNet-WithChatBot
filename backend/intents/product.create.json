@@ -1,0 +1,123 @@
+{
+  "id": "b2c3d4e5-a2b3-c4d5-e6f7-a8b9c0d1e2f3",
+  "name": "product.create",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "p-name",
+          "name": "product-name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$product-name",
+          "prompts": [
+            "What is the name of the new product?"
+          ]
+        },
+        {
+          "id": "p-price",
+          "name": "price",
+          "required": true,
+          "dataType": "@sys.number",
+          "value": "$price",
+          "prompts": [
+            "What is the price per unit for this product?"
+          ]
+        },
+        {
+          "id": "p-uom",
+          "name": "unit-of-measure",
+          "required": true,
+          "dataType": "@unit-of-measure",
+          "value": "$unit-of-measure",
+          "prompts": [
+            "And what is the unit of measure (e.g., kg or each)?"
+          ]
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "add a new product",
+          "userDefined": false
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "create a product",
+          "userDefined": false
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "I want to add a product called ",
+          "userDefined": false
+        },
+        {
+          "text": "Bleach",
+          "alias": "product-name",
+          "meta": "@sys.any",
+          "userDefined": true
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "add ",
+          "userDefined": false
+        },
+        {
+          "text": "Detergent",
+          "alias": "product-name",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": " to the catalog which costs ",
+          "userDefined": false
+        },
+        {
+          "text": "10",
+          "alias": "price",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " per ",
+          "userDefined": false
+        },
+        {
+          "text": "kg",
+          "alias": "unit-of-measure",
+          "meta": "@unit-of-measure",
+          "userDefined": true
+        }
+      ]
+    }
+  ]
+}

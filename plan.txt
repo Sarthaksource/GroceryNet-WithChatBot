@@ -1,0 +1,6 @@
+Chatbot icon at bottom right
+can list/search products
+can add/remove products
+can get customer's order details
+can add/remove order to/from customer order
+can remove all orders of a customer

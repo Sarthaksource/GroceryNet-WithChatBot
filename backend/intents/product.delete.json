@@ -1,0 +1,87 @@
+{
+  "id": "c4d5e6f7-b5c6-d7e8-f9a0-b1c2d3e4f5a6",
+  "name": "product.delete",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "p-name",
+          "name": "product-name",
+          "required": true,
+          "dataType": "@sys.any",
+          "value": "$product-name",
+          "prompts": [
+            "Which product would you like to delete?"
+          ]
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "delete a product",
+          "userDefined": false
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "remove a product from the catalog",
+          "userDefined": false
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "I want to delete the product called ",
+          "userDefined": false
+        },
+        {
+          "text": "Old Shoes",
+          "alias": "product-name",
+          "meta": "@sys.any",
+          "userDefined": true
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "please remove ",
+          "userDefined": false
+        },
+        {
+          "text": "Expired Milk",
+          "alias": "product-name",
+          "meta": "@sys.any",
+          "userDefined": true
+        },
+        {
+          "text": " from the inventory",
+          "userDefined": false
+        }
+      ]
+    }
+  ]
+}

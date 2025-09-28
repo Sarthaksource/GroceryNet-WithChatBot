@@ -1,0 +1,75 @@
+{
+  "id": "f6a7b8c9-d0e1-2345-6789-0abcdef12345",
+  "name": "order.cancel",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "cust1",
+          "name": "customer-name",
+          "required": true,
+          "dataType": "@sys.person",
+          "value": "$customer-name",
+          "prompts": [
+            "Which customer's order should I cancel?"
+          ]
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "data": [
+        {
+          "text": "Cancel the order for ",
+          "userDefined": false
+        },
+        {
+          "text": "John Doe",
+          "alias": "customer-name",
+          "meta": "@sys.person",
+          "userDefined": true
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "delete everything for ",
+          "userDefined": false
+        },
+        {
+          "text": "Jane",
+          "alias": "customer-name",
+          "meta": "@sys.person",
+          "userDefined": true
+        }
+      ]
+    },
+    {
+      "data": [
+        {
+          "text": "I need to delete an order",
+          "userDefined": false
+        }
+      ]
+    }
+  ]
+}

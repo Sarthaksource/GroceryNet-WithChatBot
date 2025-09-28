@@ -1,0 +1,33 @@
+{
+  "id": "d4e5f6a7-b8c9-0123-4567-890abcdef123",
+  "name": "order.remove",
+  "auto": true,
+  "contexts": [ "ongoing-order" ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [ { "name": "ongoing-order", "lifespan": 5 } ],
+      "parameters": [
+        { "id": "prod1", "name": "product-name", "required": true, "dataType": "@product-name", "value": "$product-name", "isList": true },
+        { "id": "rem1", "name": "remove-order", "required": false, "dataType": "@remove-order", "value": "$remove-order", "isList": false }
+      ],
+      "messages": [ { "type": 0, "lang": "en", "speech": [] } ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    { "data": [ { "text": "remove", "alias": "remove-order", "meta": "@remove-order", "userDefined": true }, { "text": " the ", "userDefined": false }, { "text": "milk", "alias": "product-name", "meta": "@product-name", "userDefined": true } ] },
+    { "data": [ { "text": "take off", "alias": "remove-order", "meta": "@remove-order", "userDefined": true }, { "text": " the ", "userDefined": false }, { "text": "laptop", "alias": "product-name", "meta": "@product-name", "userDefined": true }, { "text": ".", "userDefined": false } ] },
+    { "data": [ { "text": "delete", "alias": "remove-order", "meta": "@remove-order", "userDefined": true }, { "text": " ", "userDefined": false }, { "text": "soda", "alias": "product-name", "meta": "@product-name", "userDefined": true }, { "text": " from the order", "userDefined": false } ] },
+    { "data": [ { "text": "I ", "userDefined": false }, { "text": "don't want", "alias": "remove-order", "meta": "@remove-order", "userDefined": true }, { "text": " the ", "userDefined": false }, { "text": "bread", "alias": "product-name", "meta": "@product-name", "userDefined": true }, { "text": " anymore.", "userDefined": false } ] },
+    { "data": [ { "text": "get rid of", "alias": "remove-order", "meta": "@remove-order", "userDefined": true }, { "text": " the ", "userDefined": false }, { "text": "cheese", "alias": "product-name", "meta": "@product-name", "userDefined": true } ] },
+    { "data": [ { "text": "I've changed my mind about the ", "userDefined": false }, { "text": "juice", "alias": "product-name", "meta": "@product-name", "userDefined": true } ] },
+    { "data": [ { "text": "Can you ", "userDefined": false }, { "text": "take", "userDefined": false }, { "text": " the ", "userDefined": false }, { "text": "soda", "alias": "product-name", "meta": "@product-name", "userDefined": true }, { "text": " ", "userDefined": false }, { "text": "off", "alias": "remove-order", "meta": "@remove-order", "userDefined": true }, { "text": " my order?", "userDefined": false } ] },
+    { "data": [ { "text": "Please ", "userDefined": false }, { "text": "exclude", "alias": "remove-order", "meta": "@remove-order", "userDefined": true }, { "text": " ", "userDefined": false }, { "text": "eggs", "alias": "product-name", "meta": "@product-name", "userDefined": true }, { "text": " from my cart.", "userDefined": false } ] }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "isRegexp": false,
+  "isEnum": false,
+  "allowFuzzyExtraction": true,
+  "name": "remove-order",
+  "automatedExpansion": false,
+  "entries": [
+    {
+      "value": "remove",
+      "synonyms": [
+        "remove",
+        "get rid of",
+        "eliminate"
+      ]
+    },
+    {
+      "value": "delete",
+      "synonyms": [
+        "delete",
+        "erase",
+        "clear"
+      ]
+    },
+    {
+      "value": "exclude",
+      "synonyms": [
+        "exclude",
+        "leave out",
+        "omit"
+      ]
+    },
+    {
+      "value": "take off",
+      "synonyms": [
+        "take off",
+        "drop",
+        "cut",
+        "off"
+      ]
+    },
+    {
+      "value": "no",
+      "synonyms": [
+        "no",
+        "not",
+        "don’t want",
+        "without"
+      ]
+    }
+  ],
+  "id": "336e4223-9347-4ef9-a0b5-1e41cd331ce3",
+  "isOverridable": false
+}

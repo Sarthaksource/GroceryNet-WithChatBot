@@ -1,0 +1,56 @@
+{
+  "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+  "name": "product.search",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "p1",
+          "name": "product-name",
+          "required": false,
+          "dataType": "@product-name",
+          "value": "$product-name",
+          "isList": false
+        },
+        {
+          "id": "p2",
+          "name": "any",
+          "required": false,
+          "dataType": "@sys.any",
+          "value": "$any",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": true,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    { "data": [ { "text": "show me all products", "userDefined": false } ] },
+    { "data": [ { "text": "search for ", "userDefined": false }, { "text": "milk", "alias": "product-name", "meta": "@product-name", "userDefined": true } ] },
+    { "data": [ { "text": "do you have ", "userDefined": false }, { "text": "laptops", "alias": "any", "meta": "@sys.any", "userDefined": true } ] },
+    { "data": [ { "text": "list products", "userDefined": false } ] },
+    { "data": [ { "text": "what do you sell?", "userDefined": false } ] },
+    { "data": [ { "text": "can I see your inventory?", "userDefined": false } ] },
+    { "data": [ { "text": "I'm looking for ", "userDefined": false }, { "text": "cheese", "alias": "any", "meta": "@sys.any", "userDefined": true } ] },
+    { "data": [ { "text": "show me what you have", "userDefined": false } ] },
+    { "data": [ { "text": "find me some ", "userDefined": false }, { "text": "bread", "alias": "product-name", "meta": "@product-name", "userDefined": true } ] },
+    { "data": [ { "text": "do you have ", "userDefined": false }, { "text": "apples", "alias": "product-name", "meta": "@product-name", "userDefined": true }, { "text": "?", "userDefined": false } ] },
+    { "data": [ { "text": "Show me ", "userDefined": false }, { "text": "laptops!", "alias": "any", "meta": "@sys.any", "userDefined": true } ] }
+  ]
+}
