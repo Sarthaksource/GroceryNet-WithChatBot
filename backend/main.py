@@ -4,7 +4,7 @@ from routers import customer, order, product, bot  # Import the new bot router
 
 app = FastAPI()
 
-origins = ["https://grocerynet.netlify.app", "http://localhost:5173"]
+origins = ["https://grocerynet.netlify.app"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
