@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Double, ForeignKey, DateTime
+from sqlalchemy import Column, Integer, String, Double, ForeignKey, DateTime, PrimaryKeyConstraint
 from sql_connection import Base
 from datetime import datetime
 from sqlalchemy.orm import relationship
@@ -9,11 +9,16 @@ class Customers(Base):
 	customer_name = Column(String(45), nullable=False)
 
 class OrderDetails(Base):
-	__tablename__ = "order_details"
-	order_id = Column(Integer, nullable=False, primary_key=True)
-	product_id = Column(Integer, ForeignKey("products.product_id"), nullable=False, primary_key=True)
-	quantity = Column(Double, nullable=False)
-	total_price = Column(Double, nullable=False)
+    __tablename__ = "order_details"
+
+    order_id = Column(Integer, ForeignKey("orders.order_id"), nullable=False)
+    product_id = Column(Integer, ForeignKey("products.product_id"), nullable=False)
+    quantity = Column(Double, nullable=False)
+    total_price = Column(Double, nullable=False)
+
+    __table_args__ = (
+        PrimaryKeyConstraint("order_id", "product_id", name="pk_orderdetails"),
+    )
 
 class Products(Base):
 	__tablename__ = "products"
