@@ -39,7 +39,7 @@ const DashboardContent = () => {
 					<tr>
 						<th scope="col">Sno</th>
 						<th scope="col">Name</th>
-						<th scope="col">Quantity</th>
+						<th scope="col">Date</th>
 						<th scope="col">Total Price</th>
 						<th scope="col">Action</th>
 					</tr>
