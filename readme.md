@@ -1,5 +1,6 @@
-# GroceryNet - FastAPI
+# GroceryNet - With ChatBot
 
-Used FastAPI for backend and React for the frontend.
+Used FastAPI for backend and ReactJS for the frontend.
+Also used Redis for session management.
 
-Other version of this project is available at [GroceryNet-Flask](https://github.com/Sarthaksource/GroceryNet-Flask).
+Live Demo [GroceryNet - With ChatBot](https://github.com/Sarthaksource/GroceryNet-Flask).
